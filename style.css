@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #f4f4f9; /* plain background outside container */
+}
+
+.container {
+    text-align: center;
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+    /* Background image inside container */
+    background-image: url('static/joe-root-tendulkar.jpg'); /* adjust path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    color: #fff; /* default text color */
+    overflow: hidden;
+}
+
+/* Dark overlay for readability */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.55); /* darker overlay */
+    border-radius: 15px;
+    z-index: 0;
+}
+
+/* Animated green "chart lines" */
+.container::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, transparent 48%, #0077ff 50%, transparent 52%);
+    background-size: 40px 40px;
+    animation: moveLines 4s linear infinite;
+    opacity: 0.25;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+@keyframes moveLines {
+    0% { background-position: 0 0; }
+    100% { background-position: 120px 120px; }
+}
+
+.container > * {
+    position: relative;
+    z-index: 1; /* keeps text above overlay + lines */
+}
+
+h1 {
+    color: #00ffff;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+p {
+    font-size: 22px;
+    margin: 12px 0;
+    color: #d9ff00;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+#counter {
+    font-size: 70px;
+    font-weight: bold;
+    color: #39ff14; /* neon green */
+    margin-top: 20px;
+    text-shadow: 
+        0 0 5px #39ff14,
+        0 0 10px #39ff14,
+        0 0 20px #39ff14,
+        0 0 40px #39ff14;
+
+    animation: neonPulse 1.5s infinite alternate;
+}
+
+@keyframes neonPulse {
+    from {
+        text-shadow: 
+            0 0 5px #39ff14,
+            0 0 10px #39ff14,
+            0 0 20px #39ff14,
+            0 0 40px #39ff14;
+    }
+    to {
+        text-shadow: 
+            0 0 10px #39ff14,
+            0 0 20px #39ff14,
+            0 0 40px #39ff14,
+            0 0 80px #39ff14;
+    }
+}
