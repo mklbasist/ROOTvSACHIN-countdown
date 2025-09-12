@@ -5,7 +5,7 @@ const counterElement = document.getElementById("counter");
 
 // Target values
 const sachinRuns = 15921;
-const rootRuns = 12542;
+const rootRuns = 13542;
 const runsNeeded = 2379;
 const startNeeded = 15922;
 
