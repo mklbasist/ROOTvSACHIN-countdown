@@ -10,7 +10,7 @@ const runsNeeded = 2236;
 const startNeeded = 15922;
 
 // Duration for animations
-const duration = 70000; // ms
+const duration = 7000; // ms
 const frameRate = 60;  // ms per frame
 
 // Universal animate function
