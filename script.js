@@ -5,8 +5,8 @@ const counterElement = document.getElementById("counter");
 
 // Target values
 const sachinRuns = 15921;
-const rootRuns = 13686;
-const runsNeeded = 2236;
+const rootRuns = 13937;
+const runsNeeded = 1985;
 const startNeeded = 15922;
 
 // Duration for animations
